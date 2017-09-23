@@ -3,6 +3,8 @@ import numpy as np
 import time
 import sys
 
+
+
 if len(sys.argv) > 1 :
 	sz = int(sys.argv[1])
 	m, n, k = sz, sz, sz
