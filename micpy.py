@@ -16,7 +16,16 @@ def sum(operand1, operand2, axis=None, dtype=None) :
 	stream_invoke (library.sumkernel, offl_o1, offl_o2, offl_r)
 	offl_r.update_host()
 	stream.sync()
+	print (result)
 	return result
+
+sz = 50
+m, n, k = sz, sz, sz
+a = np.random.random(m * k).reshape((m, k))
+b = np.random.random(k * n).reshape((k, n))
+test = sum(a,b)
+
+
 	
 
 
